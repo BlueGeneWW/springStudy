@@ -36,8 +36,4 @@ public class JdbcDemo1 {
         pstm.close();
         conn.close();
     }
-
-    public void test(){
-        System.out.println("Git");
-    }
 }
