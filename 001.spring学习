@@ -1,0 +1,24 @@
+spring共四天
+第一天：spring框架的概述以及spring中基于XML的IOC配置
+第二天：spring中基于注解的IOC（控制反转）及ioc案例
+第三天：spring中的AOP（面向切面编程）和基于XML以及注解的AOP配置
+第四天：spring中的JdbcTemplate以及spring的事务控制
+--------------------------------------------spring的概述------------------------------------------
+1.spring的概述
+  spring是什么
+  spring的两大核心：IOC和AOP
+  spring的发展历程和优势:(1)方便解耦，简化开发;
+                         (2)AOP编程的支持;
+			 (3)声明式事务的支持;
+                         (4)方便程序的测试;
+			 (5)方便集成各种优秀框架;
+			 (6)降低javaee API的使用难度
+  spring的体系结构
+2.程序的耦合及解耦
+  曾经案例中的问题
+  工厂模式解耦
+3.IOC的概念和spring中的IOC
+  spring中基于XML的IOC环境搭建
+4.依赖注入DI(Dependency Injection)
+5.作业：
+  
