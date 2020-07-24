@@ -15,8 +15,8 @@ public class Client {
      *
      * ApplicationContext的三个常用实现类：
      *      ClassPathXmlApplicationContext：它可以加载类路径下的配置文件，要求配置文件必须在类路径下。不在的话，加载不了。(更常用)
-     *      FileSystemXmlApplicationContext：它可以加载磁盘任意路径下的配置文件(必须有访问权限）
-     *
+     *      FileSystemXmlApplicationContext：它可以加载磁盘任意路径下的配置文件(必须有访问权限：java程序是运行在操作系统上的，操作系统如果没有访问权限运行不了）
+     *                                       但实际开发中我们的配置文件通常和我们的项目放到一块，所以这种方式不常用
      *      AnnotationConfigApplicationContext：它是用于读取注解创建容器的，是明天的内容。
      *
      * 核心容器的两个接口引发出的问题：
@@ -30,10 +30,11 @@ public class Client {
     public static void main(String[] args) {
         //1.获取核心容器对象
         ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-//        ApplicationContext ac = new FileSystemXmlApplicationContext("C:\\Users\\zhy\\Desktop\\bean.xml");
+        //把bean.xml文件拷到桌面上，依然可以打印对象
+        //ApplicationContext ac = new FileSystemXmlApplicationContext("C:\\Users\\zhy\\Desktop\\bean.xml");
         //2.根据id获取Bean对象
-        IAccountService as  = (IAccountService)ac.getBean("accountService");
-        IAccountDao adao = ac.getBean("accountDao",IAccountDao.class);
+        IAccountService as  = (IAccountService)ac.getBean("accountService");//1.拿到的是Object类型，我们自己强转成我们需要的类型
+        IAccountDao adao = ac.getBean("accountDao",IAccountDao.class);      //2.传给它一个字节码，根据这个字节码强转成我们需要的类型
 
         System.out.println(as);
         System.out.println(adao);

@@ -9,3 +9,4 @@
 
     <bean id="accountDao" class="com.itheima.dao.impl.AccountDaoImpl"></bean>
 </beans>
+<!--<beans></beans>:容器,它是一个map-->
