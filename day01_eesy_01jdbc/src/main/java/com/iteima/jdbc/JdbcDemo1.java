@@ -40,7 +40,4 @@ public class JdbcDemo1 {
         pstm.close();
         conn.close();
     }
-    public void rte(){
-
-    }
 }
