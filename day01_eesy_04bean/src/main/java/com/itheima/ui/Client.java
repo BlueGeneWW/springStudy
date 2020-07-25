@@ -11,6 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Client {
 
     /**
+     *
      * main方法是一切应用程序的入口，当main方法结束之后，我们当前的这个应用程序中线程
      * 占据的内存全部释放。如下：这个时候当然也也包含容器，但是这个时候还没来得及调用容器的销毁方法，
      * 就已经把容器的内存给释放了，主线程就已经结束了，所以手动关闭容器。
