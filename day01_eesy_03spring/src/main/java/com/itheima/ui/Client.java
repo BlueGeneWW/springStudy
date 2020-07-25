@@ -11,6 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Client {
 
     /**
+     *
      * 获取spring的Ioc核心容器，并根据id获取对象
      *
      * ApplicationContext的三个常用实现类：
