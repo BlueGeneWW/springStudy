@@ -1,0 +1,11 @@
+spring第二天：spring基于注解的IOC以及IOC的案例
+1.spring中的ioc常用注解
+2.案例使用xml方式和注解方式实现单表的crud操作
+          持久层技术选择：dbutils
+3.改造基于注解的ioc案列，使用纯注解的方式实现
+          spring的一些新注解的使用
+4.spring和junit的整合
+5.spring的IOC容器：map结构
+6.Autowired   ：自动按照类型注入
+  private     IAccountDao accountDao   =   null;
+  访问修饰符  数据类型    变量名称         数据类型  
