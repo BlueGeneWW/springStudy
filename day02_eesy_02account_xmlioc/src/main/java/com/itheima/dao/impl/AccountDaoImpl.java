@@ -22,6 +22,7 @@ public class AccountDaoImpl implements IAccountDao {
     @Override
     public List<Account> findAllAccount() {
         try{
+            //BeanListHandler查询所有记录
             return runner.query("select * from account",new BeanListHandler<Account>(Account.class));
         }catch (Exception e) {
             throw new RuntimeException(e);
@@ -31,6 +32,7 @@ public class AccountDaoImpl implements IAccountDao {
     @Override
     public Account findAccountById(Integer accountId) {
         try{
+            //BeanHandler查询一条记录
             return runner.query("select * from account where id = ? ",new BeanHandler<Account>(Account.class),accountId);
         }catch (Exception e) {
             throw new RuntimeException(e);

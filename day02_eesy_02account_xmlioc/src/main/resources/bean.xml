@@ -15,7 +15,7 @@
         <property name="runner" ref="runner"></property>
     </bean>
 
-    <!--配置QueryRunner-->
+    <!--配置QueryRunner scope="prototype":避免多个dao使用同一个对象引起线程问题-->
     <bean id="runner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
         <!--注入数据源-->
         <constructor-arg name="ds" ref="dataSource"></constructor-arg>
@@ -25,8 +25,8 @@
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <!--连接数据库的必备信息-->
         <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/eesy"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/bluegene"></property>
         <property name="user" value="root"></property>
-        <property name="password" value="1234"></property>
+        <property name="password" value="root"></property>
     </bean>
 </beans>
