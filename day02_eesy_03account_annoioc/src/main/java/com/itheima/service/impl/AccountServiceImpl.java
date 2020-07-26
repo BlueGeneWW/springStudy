@@ -14,6 +14,7 @@ import java.util.List;
 @Service("accountService")
 public class AccountServiceImpl implements IAccountService{
 
+    //当我们使用注解注入的时候set方法就不再是必须的了
     @Autowired
     private IAccountDao accountDao;
 

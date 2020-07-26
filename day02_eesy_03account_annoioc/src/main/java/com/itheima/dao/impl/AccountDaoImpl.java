@@ -19,8 +19,6 @@ public class AccountDaoImpl implements IAccountDao {
     @Autowired
     private QueryRunner runner;
 
-
-
     @Override
     public List<Account> findAllAccount() {
         try{
