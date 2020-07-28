@@ -11,7 +11,7 @@ import java.lang.reflect.Proxy;
  * 用于创建Service的代理对象的工厂
  */
 public class BeanFactory {
-
+    //<!-- 注入service：普通的没有代理的accountService-->
     private IAccountService accountService;
 
     private TransactionManager txManager;
@@ -35,7 +35,6 @@ public class BeanFactory {
                 new InvocationHandler() {
                     /**
                      * 添加事务的支持
-                     *
                      * @param proxy
                      * @param method
                      * @param args
@@ -69,6 +68,5 @@ public class BeanFactory {
                         }
                     }
                 });
-
     }
 }

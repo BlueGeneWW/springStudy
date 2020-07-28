@@ -61,7 +61,7 @@ public class AccountServiceImpl implements IAccountService{
             //2.5更新转出账户
             accountDao.updateAccount(source);
 
-            //int i=1/0;不满足事务的一致状态。报错后，转出的账户钱减少了，但是转入的账户钱不变！！！！！！！！
+            //int i=1/0;//不满足事务的一致状态。报错后，转出的账户钱减少了，但是转入的账户钱不变！！！！！！！！
 
             //2.6更新转入账户
             accountDao.updateAccount(target);
