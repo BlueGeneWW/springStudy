@@ -18,6 +18,7 @@ public class AccountServiceTest {
     /**
      * 用了动态代理技术之后，我们让重复的代码都消失了（对比AccountServiceImpl类和AccountServiceImpl_OLD类），
      * 让方法之间的依赖也解除了，同时实现了开发时候的效率问题
+     *
      */
     @Autowired
     @Qualifier("proxyAccountService")
