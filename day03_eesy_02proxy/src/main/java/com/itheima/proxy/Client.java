@@ -55,7 +55,7 @@ public class Client {
                         Float money = (Float)args[0];
                         //2.判断当前方法是不是销售
                         if("saleProduct".equals(method.getName())) {
-                            //producer被代理对象的方法。 匿名内部类访问外部成员变量的时候，外部成员变量要求是最终的
+                            //producer 被代理对象的方法。 匿名内部类访问外部成员变量的时候，外部成员变量要求是最终的
                             //money*0.8f 经销商抽取百分之二十的提成
                             returnValue = method.invoke(producer, money*0.8f);
                         }
