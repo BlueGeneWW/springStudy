@@ -20,6 +20,8 @@
             <artifactId>spring-test</artifactId>
             <version>5.0.2.RELEASE</version>
         </dependency>
+
+        <!--与queryrunner相关-->
         <dependency>
             <groupId>commons-dbutils</groupId>
             <artifactId>commons-dbutils</artifactId>

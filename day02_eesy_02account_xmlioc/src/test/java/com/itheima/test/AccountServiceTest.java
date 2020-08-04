@@ -40,7 +40,7 @@ public class AccountServiceTest {
     public void testSave() {
         Account account = new Account();
         account.setName("test");
-        account.setMoney(12345f);
+        account.setMoney(12347f);
         //3.执行方法
         as.saveAccount(account);
 

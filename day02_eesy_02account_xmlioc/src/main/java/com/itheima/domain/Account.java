@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * 账户的实体类
+ * Serializable csdn
  */
 public class Account implements Serializable {
 

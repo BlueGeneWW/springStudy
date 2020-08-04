@@ -39,7 +39,7 @@ public class JdbcConfig {
     }
 
     /**
-     * 创建数据源对象
+     * 创建数据源（连接池）对象
      * @return
      */
     @Bean(name="ds2")

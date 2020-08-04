@@ -20,8 +20,10 @@ import java.util.List;
  *      3、告知spring的运行器，spring的ioc创建是基于xml还是注解的，并且说明位置
  *          @ContextConfiguration
  *                  locations：指定xml文件的位置，加上classpath关键字，表示在类路径下
+ *                  例：@ContextConfiguration(locations = "classpath:bean.xml")
  *                  例：@ContextConfiguration(locations = {"classpath:applicationContext.xml"})
  *                  classes：指定注解类所在地位置
+ *                  例：@ContextConfiguration(classes = SpringConfiguration.class)
  *   当我们使用spring 5.x版本的时候，要求junit的jar必须是4.12及以上
  *
  *

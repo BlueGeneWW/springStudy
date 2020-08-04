@@ -15,13 +15,13 @@
         <property name="runner" ref="runner"></property>
     </bean>
 
-    <!--配置QueryRunner scope="prototype":避免多个dao使用同一个对象引起线程问题-->
+    <!--配置QueryRunner scope="prototype":避免多个dao使用同一个对象引起线程问题 <<<>>>-->
     <bean id="runner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
         <!--注入数据源-->
         <constructor-arg name="ds" ref="dataSource"></constructor-arg>
     </bean>
 
-    <!-- 配置数据源 -->
+    <!-- 配置数据源（连接池） -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <!--连接数据库的必备信息-->
         <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
