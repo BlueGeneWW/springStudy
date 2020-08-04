@@ -15,9 +15,9 @@ public class AccountServiceImpl3 implements IAccountService {
 
     private String[] myStrs;
     private List<String> myList;
-    private Set<String> mySet;
+    private Set<String> mySet;//<---***--->
     private Map<String,String> myMap;
-    private Properties myProps;
+    private Properties myProps;//<---***---> 它的结构和map结构相同
 
     public void setMyStrs(String[] myStrs) {
         this.myStrs = myStrs;
