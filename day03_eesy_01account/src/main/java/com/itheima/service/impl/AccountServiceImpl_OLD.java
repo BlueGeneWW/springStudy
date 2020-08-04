@@ -84,7 +84,6 @@ public class AccountServiceImpl_OLD implements IAccountService{
             //5.释放连接
             txManager.release();
         }
-
     }
 
     @Override
@@ -103,7 +102,6 @@ public class AccountServiceImpl_OLD implements IAccountService{
             //5.释放连接
             txManager.release();
         }
-
     }
 
     @Override
@@ -157,7 +155,5 @@ public class AccountServiceImpl_OLD implements IAccountService{
             //5.释放连接
             txManager.release();
         }
-
-
     }
 }

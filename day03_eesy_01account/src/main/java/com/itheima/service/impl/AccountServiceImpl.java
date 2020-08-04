@@ -11,7 +11,7 @@ import java.util.List;
  *
  * 事务控制应该都是在业务层！！！！
  *
- * 注意：由于每次获取一个连接，导致事务无法实现控制（对比AccountServiceImpl_OLD类）。
+ * 注意：由于每次获取一个连接，导致事务无法实现控制（AccountServiceImpl_OLD类中的转账方法没有加事务控制的时候）。
  */
 public class AccountServiceImpl implements IAccountService{
 

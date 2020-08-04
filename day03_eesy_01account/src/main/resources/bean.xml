@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--配置代理的service-->
+    <!--配置代理的service,这个代理的service是从工厂中拿的-->
     <bean id="proxyAccountService" factory-bean="beanFactory" factory-method="getAccountService"></bean>
 
     <!--配置beanfactory-->
