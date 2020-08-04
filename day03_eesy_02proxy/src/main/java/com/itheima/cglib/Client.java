@@ -22,7 +22,7 @@ public class Client {
          *      基于接口的动态代理
          *      基于子类的动态代理（需要导入依赖）
          *  基于子类的动态代理：
-         *      涉及的类：Enhancer
+         *      涉及的类：Enhancer(增强器; 放大器)
          *      提供者：第三方cglib库
          *  如何创建代理对象：
          *      使用Enhancer类中的create方法
@@ -30,7 +30,7 @@ public class Client {
          *      被代理类不能是最终类
          *  create方法的参数：
          *      Class：字节码
-         *          它是用于指定被代理对象的字节码。（有了被代理对象的字节码，不管我想用它的类加载器还是看看它有哪些内容都可以得到）
+         *          它是用于指定被代理对象的字节码 <---***--->。（有了被代理对象的字节码，不管我想用它的类加载器还是看看它有哪些内容都可以得到）
          *      Callback：用于提供增强的代码（它是一个接口）
          *          它是让我们写如何代理。我们一般都是写一个该接口的实现类，通常情况下都是匿名内部类，但不是必须的。
          *          此接口的实现类都是谁用谁写。
@@ -38,10 +38,10 @@ public class Client {
          */
         Producer cglibProducer = (Producer)Enhancer.create(producer.getClass(), new MethodInterceptor() {
             /**
-             * 执行北地阿里对象的任何方法都会经过该方法
-             * @param proxy
-             * @param method
-             * @param args
+             * 执行被代理对象的任何方法都会经过该方法
+             * @param proxy  代理对象的引用（通常不用）
+             * @param method  当前执行的方法
+             * @param args  当前执行方法所需的参数
              *    以上三个参数和基于接口的动态代理中invoke方法的参数是一样的，含义也一样
              * @param methodProxy ：当前执行方法的代理对象（通常用不上）
              * @return
