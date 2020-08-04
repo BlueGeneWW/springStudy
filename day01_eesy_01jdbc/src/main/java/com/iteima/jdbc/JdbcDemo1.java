@@ -16,9 +16,9 @@ import java.sql.ResultSet;
  *      实际开发中：
  *          应该做到：编译期不依赖，运行时才依赖。
  *      解耦的思路：
- *          第一步：使用反射来创建对象，而避免使用new关键字。
+ *          第一步：使用反射来创建对象，而避免使用new关键字。<---***--->
  *
- *          第二步：通过读取配置文件来获取要创建的对象全限定类名
+ *          第二步：通过读取配置文件来获取要创建的对象全限定类名  <---***--->
  *
  */
 public class JdbcDemo1 {
@@ -36,13 +36,9 @@ public class JdbcDemo1 {
         while(rs.next()){
             System.out.println(rs.getString("stu_name"));
         }
-        //6.释放资源
+        //6.释放资源,先打开的后关闭
         rs.close();
         pstm.close();
         conn.close();
-    }
-
-    public void testMethod(){
-
     }
 }
