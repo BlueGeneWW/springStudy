@@ -1,0 +1,21 @@
+1.spring中的JdbcTemplate（template是模板的意思）
+  JdbcTemplate是spring框架中提供的一个对象，是对原始Jdbc API对象的简单封装，它是
+  在 spring-jdbc-5.0.2.RELEASE.jar 中，我们在导包的时候，除了要导入这个 jar 包 外，
+  还需要导入一个 spring-tx-5.0.2.RELEASE.jar（它是和事务相关的）。
+  spring为我们提供了许多操作模板类：
+  操作关系型数据的：
+    JdbcTemplate
+    HibernateTemplate
+  操作nosql数据库的：
+    RedisTemplate
+  操作消息队列的：
+    JmsTemplate
+
+2.spring中的JdbcTemplate
+  JmsTemplate的作用：用于和数据库交互的，实现对表的crud操作。
+  如何创建该对象：
+  对象中的常用方法：
+
+3.spring中的事务控制
+  1）基于xml的
+  2）基于注解的
