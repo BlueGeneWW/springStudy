@@ -23,8 +23,6 @@ public class AccountServiceImpl implements IAccountService{
 
     }
 
-
-
     @Override
     public void transfer(String sourceName, String targetName, Float money) {
         System.out.println("transfer....");
