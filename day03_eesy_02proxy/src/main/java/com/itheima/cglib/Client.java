@@ -40,7 +40,7 @@ public class Client {
             /**
              * 执行被代理对象的任何方法都会经过该方法
              * @param proxy  代理对象的引用（通常不用）
-             * @param method  当前执行的方法
+             * @param method  当前执行的方法（代理对象中当前执行的方法）
              * @param args  当前执行方法所需的参数
              *    以上三个参数和基于接口的动态代理中invoke方法的参数是一样的，含义也一样
              * @param methodProxy ：当前执行方法的代理对象（通常用不上）

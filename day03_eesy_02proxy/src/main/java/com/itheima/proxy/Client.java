@@ -41,7 +41,7 @@ public class Client {
                      * 作用：执行被代理对象的任何接口方法都会经过该方法
                      * 方法参数的含义
                      * @param proxy   代理对象的引用（通常不用）
-                     * @param method  当前执行的方法（被代理对象的接口方法）
+                     * @param method  当前执行的方法（代理对象中当前执行的方法）
                      * @param args    当前执行方法所需的参数
                      * @return        和被代理对象方法有相同的返回值
                      * @throws Throwable
@@ -54,7 +54,7 @@ public class Client {
                         Float money = (Float)args[0];
                         //2.判断当前方法是不是销售
                         if("saleProduct".equals(method.getName())) {
-                            //producer 被代理对象的方法。 匿名内部类访问外部成员变量的时候，外部成员变量要求是最终的  <---***--->
+                            //producer 匿名内部类访问外部成员变量的时候，外部成员变量要求是最终的  <---***--->
                             //money*0.8f 经销商抽取百分之二十的提成
                             returnValue = method.invoke(producer, money*0.8f);
                         }
